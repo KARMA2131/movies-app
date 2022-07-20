@@ -62,7 +62,7 @@ const moviesStore = {
         const movies = serializeResponse(response);
         commit(MOVIES, movies);
       } catch (err) {
-        console.log(err);
+        return err;
       } finally {
         dispatch("toggleLoader", false, { root: true });
       }
